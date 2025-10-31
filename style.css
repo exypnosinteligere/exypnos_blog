@@ -1,0 +1,302 @@
+/* RESET BÁSICO */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0d0d0d; /* Fundo muito escuro, quase preto */
+    color: #00ff00; /* Texto verde neon, assinatura de interfaces antigas/hackers */
+    font-family: 'VT323', 'Inconsolata', monospace; /* Fonte monoespaçada para simular terminal */
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex; /* Para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaçamento geral */
+    min-height: 100vh; /* Garante que o body ocupe a altura total */
+}
+
+/* Importar uma fonte retro, se quiser. VT323 é ótima para isso. */
+/* @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); */
+/* Se a URL acima não funcionar diretamente, coloque no <head> do HTML:
+   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+*/
+
+/* CONTÊINER PRINCIPAL DO SITE */
+.site-container {
+    width: 100%;
+    max-width: 1000px; /* Largura máxima para o conteúdo */
+    border: 1px solid #005500; /* Borda sutil verde escuro */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2); /* Brilho neon discreto */
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 250px 1fr; /* Largura da sidebar e conteúdo */
+    gap: 1px; /* Espaçamento mínimo entre os blocos para linhas de grade */
+    background-color: #1a1a1a; /* Cor de fundo para os blocos internos */
+}
+
+/* HEADER */
+.main-header {
+    grid-area: header;
+    background-color: #000000; /* Preto puro */
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #005500;
+}
+
+.main-header h1 {
+    font-size: 2.5em;
+    color: #00ffff; /* Ciano vibrante para o título */
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-header h1::before {
+    content: ">> "; /* Prefixo de terminal */
+    color: #00ff00;
+}
+
+.main-header p {
+    font-size: 0.9em;
+    color: #aaaaaa; /* Cinza para descrição */
+    margin-top: 5px;
+}
+
+/* Efeito Glitch para o texto do título (opcional, pode ser pesado) */
+/*
+h1 {
+    position: relative;
+    overflow: hidden;
+}
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ff00ff;
+    animation: glitch 1s infinite alternate-reverse;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+*/
+
+/* BARRA LATERAL (SIDEBAR) */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #000000;
+    padding: 15px;
+    border-right: 1px solid #005500;
+    border-top: 1px solid #005500; /* Adiciona uma linha no topo também */
+}
+
+.sidebar h2 {
+    color: #00ffff;
+    font-size: 1.2em;
+    border-bottom: 1px dashed #005500;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.sidebar h2::before {
+    content: "// "; /* Comentário de código */
+    color: #888888;
+}
+
+.sidebar p, .sidebar ul {
+    color: #dddddd; /* Um cinza mais claro para texto secundário */
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove marcadores padrão */
+    padding-left: 0;
+}
+
+.sidebar ul li::before {
+    content: "> "; /* Marcador de lista estilo terminal */
+    color: #00ff00;
+}
+
+.sidebar a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #00ff00; /* Verde ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* CONTEÚDO PRINCIPAL (POSTS) */
+.main-content {
+    grid-area: content;
+    background-color: #000000;
+    padding: 20px;
+    border-top: 1px solid #005500; /* Adiciona uma linha no topo também */
+}
+
+.blog-post {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #005500; /* Separador sutil */
+}
+
+.post-title {
+    color: #00ff00; /* Verde neon para títulos de post */
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.post-title::before {
+    content: "$ "; /* Prefixo de comando */
+    color: #00ffff;
+}
+
+.post-meta {
+    font-size: 0.8em;
+    color: #888888;
+    margin-bottom: 15px;
+}
+
+.post-meta time {
+    color: #aaaaaa;
+}
+
+.post-content p {
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+.post-content a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-content a:hover {
+    color: #00ff00;
+    text-decoration: underline;
+}
+
+.read-more a {
+    font-weight: bold;
+    color: #00ffff;
+}
+
+/* Guestbook */
+.guestbook {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #005500;
+    background-color: #0d0d0d;
+}
+
+.guestbook h3 {
+    color: #00ff00;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.guestbook input,
+.guestbook textarea {
+    width: calc(100% - 10px); /* Ajusta para padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #005500;
+    background-color: #000000;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    font-size: 0.9em;
+}
+
+.guestbook textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 80px;
+}
+
+.guestbook button {
+    background-color: #00ff00; /* Botão verde */
+    color: #000000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.guestbook button:hover {
+    background-color: #005500;
+    color: #00ff00;
+}
+
+/* FOOTER */
+.main-footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 15px;
+    background-color: #000000;
+    border-top: 1px solid #005500;
+    font-size: 0.8em;
+    color: #888888;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+/* Banner superior de Marquee pode ser removido ou alterado para um estilo mais "Wired" */
+#top-banner {
+    display: none; /* Desabilita o banner de marquee por padrão, não combina com o estilo Wired */
+}
+
+/* Blink effect para o título, se quiser manter (menos agressivo) */
+@keyframes subtle-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+blink {
+    animation: subtle-blink 1.5s step-end infinite;
+    color: #00ffff; /* Ciano para o blink */
+}
+
+/* Responsividade básica para telas menores (ainda mantendo a estética "quebrada" */
+@media (max-width: 768px) {
+    .site-container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+        max-width: 95%;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #005500; /* Linha de separação entre sidebar e content */
+    }
+
+    .main-content {
+        border-top: none; /* Remove a linha superior duplicada em mobile */
+    }
+}

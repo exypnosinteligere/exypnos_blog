@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Exypnos Terminal :: Interface v.2.0 ::</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="site-container">
+        
+        <header class="main-header">
+            <h1>[Exypnos] Software Engineer <blink>INTERFACE</blink></h1>
+            <p>Acesso ao núcleo de dados de Yago Melo. Rio de Janeiro, Brasil.</p>
+        </header>
+
+        <aside class="sidebar">
+            <h2>⭐ Entidade: Yago Melo</h2>
+            <p>Graduando em Engenharia de Software | Estácio de Sá. Mente curiosa, em busca de desafios em <span style="color: #00ffff;">Backend</span> e <span style="color: #00ffff;">Análise de Dados</span>.</p>
+            
+            <hr style="border-color: #005500; margin: 15px 0;">
+            
+            <h2>🔗 Protocolos de Navegação</h2>
+            <ul>
+                <li><a href="about.html">> Perfil de Entidade</a></li>
+                <li><a href="logs.html">> Logs de Transmissão (Arquivo)</a></li>
+                <li><a href="contact.html">> Terminal de Comunicação</a></li>
+            </ul>
+
+            <hr style="border-color: #005500; margin: 15px 0;">
+            
+            <h2>📊 Análise de Atividade</h2>
+            <p>Registros de acesso: <span id="visitor-counter">INIT...</span></p>
+            <p>Última sincronização: <span id="last-update">...</span></p>
+
+            
+            <p style="text-align: center; font-size: 0.7em; color: #888;">(Conexão Segura estabelecida)</p>
+
+        </aside>
+
+        <main class="main-content">
+
+            <article class="blog-post" id="post-recente">
+                <h2 class="post-title">PROCESSANDO: Por que Python é a Chave do Backend em Grandes Redes</h2>
+                <p class="post-meta">Início da Transmissão: <time datetime="2025-10-31">31/10/2025</time> | Categorias: <span style="color: #00ffff;">Backend, Python, Data Science</span></p>
+                <div class="post-content">
+                    <p>O universo digital é vasto e complexo. No coração de muitas infraestruturas robustas, a linguagem Python emerge como um pilar fundamental para a construção de sistemas de Backend eficientes e escaláveis...</p>
+                    <p>Este post explora a intersecção entre Python, a arquitetura de microserviços e a capacidade de processamento de dados que viabiliza projetos como o BetAllign...</p>
+                    <p class="read-more"><a href="logs.html" style="color: #00ffff;">**[ ACESSAR PROTOCOLO COMPLETO >> ]**</a></p>
+                </div>
+                
+            </article>
+
+            <div class="guestbook">
+                <h3>// REGISTRAR ACESSO (LOG DE VISITANTES)</h3>
+                <form>
+                    <input type="text" placeholder="Nome de Usuário (Alias)" required><br>
+                    <textarea placeholder="Mensagem Criptografada (Comentário) 💬" required></textarea><br>
+                    <button type="submit">Enviar Log</button>
+                </form>
+            </div>
+
+        </main>
+
+    </div> 
+    
+    <footer class="main-footer">
+        <p>Copyright &copy; 2025 Exypnos. Acesso e Modificação Permitidos (Open Source Protocol).</p>
+        <p>[ Console v.2.1.0 Online ]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
