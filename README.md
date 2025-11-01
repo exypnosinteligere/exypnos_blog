@@ -6,7 +6,7 @@
 
 ## 👁️ Visão Geral do Projeto
 
-Este projeto funciona como a minha **interface de portfólio e blog pessoal**, desenvolvido com foco em front-end puro (HTML, CSS, JS) através de uma **estética de terminal retro-futurista** inspirada na revista *Wired* e no anime *Serial Experiments Lain*.
+Este projeto funciona como a minha **interface de portfólio e blog pessoal**, desenvolvido com foco em front-end puro (HTML, CSS, JS) através de uma **estética de terminal retro-futurista**.
 
 O principal objetivo deste repositório é simular um ambiente de "console" para apresentar meus estudos e projetos em **Engenharia de Software** e **Backend**.
 
